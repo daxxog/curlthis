@@ -20,7 +20,28 @@
         root.Curlthis = factory();
   }
 }(this, function() {
-    var Curlthis;
-    
-    return Curlthis;
+    var async = require('async'),
+        argv = require('optimist').argv._,
+        packages = {
+            'jquery': 'http://code.jquery.com/jquery-1.11.0.min.js'
+        };
+
+    if(argv.length > 0) {
+        async.each(argv, function(v, cb) {
+            if(typeof packages[v] == 'string') {
+                console.log(packages[v]);
+                cb();
+            } else {
+                cb('[ERROR] Package does not exist: ' + v);
+            }
+        }, function(err) {
+            if(err) {
+                console.error(err);
+            } else {
+                console.log('Sucessfully installed packages: ', argv);
+            }
+        });
+    } else {
+        console.log(JSON.stringify(packages));
+    }
 }));
