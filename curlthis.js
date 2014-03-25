@@ -21,6 +21,8 @@
   }
 }(this, function() {
     var async = require('async'),
+        path = require('path'),
+        spawn = require('child_process').spawn,
         argv = require('optimist').argv._,
         packages = {
             'jquery': 'http://code.jquery.com/jquery-1.11.0.min.js'
@@ -29,8 +31,13 @@
     if(argv.length > 0) {
         async.each(argv, function(v, cb) {
             if(typeof packages[v] == 'string') {
-                console.log(packages[v]);
-                cb();
+                spawn('curl', ['-o', path.basename(packages[v]), packages[v]]).on('exit', function(code) {
+                    if(code === 0) {
+                        cb();
+                    } else {
+                        cb('[ERROR] curl exited with error code: ' + code);
+                    }
+                });
             } else {
                 cb('[ERROR] Package does not exist: ' + v);
             }
