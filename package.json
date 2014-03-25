@@ -3,7 +3,7 @@
     "description" : "grabs predetermined stuff from the internet",
     "homepage"    : "https://github.com/daxxog/curlthis",
     "main"        : "curlthis.min.js",
-    "version"     : "0.0.1",
+    "version"     : "0.0.2",
     "engines": { "node" : ">=0.7.0" },
     "maintainers": [{
         "name"  : "David Volm",
@@ -13,6 +13,10 @@
     "repository": {
         "type" : "git",
         "url"  : "https://github.com/daxxog/curlthis.git"
+    },
+    "dependencies": {
+        "optimist": "*",
+        "async": "*"
     },
     "devDependencies": {
         "bitfactory": "*",
