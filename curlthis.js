@@ -25,7 +25,8 @@
         spawn = require('child_process').spawn,
         argv = require('optimist').argv._,
         packages = {
-            'jquery': 'http://code.jquery.com/jquery-1.11.0.min.js'
+            'jquery': 'http://code.jquery.com/jquery-1.11.0.min.js',
+            'linksify': 'https://raw.githubusercontent.com/daxxog/linksify/master/linksify.min.js'
         };
 
     if(argv.length > 0) {
