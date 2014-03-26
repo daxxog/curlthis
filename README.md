@@ -7,9 +7,9 @@ Install
 -------
 stable
 ```bash
-npm install curlthis
+npm install -g curlthis
 ```
 edge
 ```bash
-npm install https://github.com/daxxog/curlthis/tarball/master
+npm install -g https://github.com/daxxog/curlthis/tarball/master
 ```
