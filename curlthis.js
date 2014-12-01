@@ -26,6 +26,7 @@
         argv = require('optimist').argv._,
         packages = {
             'jquery': 'http://code.jquery.com/jquery-latest.min.js',
+            'eventemitter': 'https://raw.githubusercontent.com/Wolfy87/EventEmitter/master/EventEmitter.min.js',
             'linksify': 'https://raw.githubusercontent.com/daxxog/linksify/master/linksify.min.js'
         };
 
