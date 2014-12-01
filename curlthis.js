@@ -26,7 +26,7 @@
         argv = require('optimist').argv._,
         request = require('request');
 
-    request('https://raw.githubusercontent.com/daxxog/curlthis/master/packages.json', function(err, res, packages) {
+    request({url: 'https://raw.githubusercontent.com/daxxog/curlthis/master/packages.json', json: true}, function(err, res, packages) {
         if(err) {
             console.log('[ERROR] Could not grab package list. res: ', res);
         } else {
