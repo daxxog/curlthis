@@ -24,33 +24,35 @@
         path = require('path'),
         spawn = require('child_process').spawn,
         argv = require('optimist').argv._,
-        packages = {
-            'jquery': 'http://code.jquery.com/jquery-latest.min.js',
-            'eventemitter': 'https://raw.githubusercontent.com/Wolfy87/EventEmitter/master/EventEmitter.min.js',
-            'linksify': 'https://raw.githubusercontent.com/daxxog/linksify/master/linksify.min.js'
-        };
+        request = require('request');
 
-    if(argv.length > 0) {
-        async.each(argv, function(v, cb) {
-            if(typeof packages[v] == 'string') {
-                spawn('curl', ['-o', path.basename(packages[v]), packages[v]]).on('exit', function(code) {
-                    if(code === 0) {
-                        cb();
+    request('https://raw.githubusercontent.com/daxxog/curlthis/master/packages.json', function(err, res, packages) {
+        if(err) {
+            console.log('[ERROR] Could not grab package list. res: ', res);
+        } else {
+            if(argv.length > 0) {
+                async.each(argv, function(v, cb) {
+                    if(typeof packages[v] == 'string') {
+                        spawn('curl', ['-o', path.basename(packages[v]), packages[v]]).on('exit', function(code) {
+                            if(code === 0) {
+                                cb();
+                            } else {
+                                cb('[ERROR] curl exited with error code: ' + code);
+                            }
+                        });
                     } else {
-                        cb('[ERROR] curl exited with error code: ' + code);
+                        cb('[ERROR] Package does not exist: ' + v);
+                    }
+                }, function(err) {
+                    if(err) {
+                        console.error(err);
+                    } else {
+                        console.log('Sucessfully installed packages: ', argv);
                     }
                 });
             } else {
-                cb('[ERROR] Package does not exist: ' + v);
+                console.log(JSON.stringify(packages));
             }
-        }, function(err) {
-            if(err) {
-                console.error(err);
-            } else {
-                console.log('Sucessfully installed packages: ', argv);
-            }
-        });
-    } else {
-        console.log(JSON.stringify(packages));
-    }
+        }
+    });
 }));

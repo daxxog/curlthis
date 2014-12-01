@@ -16,7 +16,8 @@
     },
     "dependencies": {
         "optimist": "*",
-        "async": "*"
+        "async": "*",
+        "request": "*"
     },
     "devDependencies": {
         "bitfactory": "*",
