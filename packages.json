@@ -1,4 +1,5 @@
 {
+    "inherits": "https://raw.githubusercontent.com/isaacs/inherits/master/inherits_browser.js",
     "jquery": "http://code.jquery.com/jquery-latest.min.js",
     "async": "https://raw.githubusercontent.com/caolan/async/master/lib/async.js",
     "eventemitter": "https://raw.githubusercontent.com/Wolfy87/EventEmitter/master/EventEmitter.min.js",
