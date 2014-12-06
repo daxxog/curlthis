@@ -5,5 +5,6 @@
     "eventemitter": "https://raw.githubusercontent.com/Wolfy87/EventEmitter/master/EventEmitter.min.js",
     "linksify": "https://raw.githubusercontent.com/daxxog/linksify/master/linksify.min.js",
     "flag-back": "https://raw.githubusercontent.com/daxxog/flag-back/master/flag-back.min.js",
-    "string": "https://raw.githubusercontent.com/jprichardson/string.js/master/lib/string.min.js"
+    "string": "https://raw.githubusercontent.com/jprichardson/string.js/master/lib/string.min.js",
+    "firebug": "https://getfirebug.com/firebug-lite.js"
 }
