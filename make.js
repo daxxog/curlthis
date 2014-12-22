@@ -1,6 +1,6 @@
 /* Curlthis / make.js
  * echo 'make script for Curlthis' && node make
- * (c) 2013 David (daXXog) Volm ><> + + + <><
+ * (c) 2014 David (daXXog) Volm ><> + + + <><
  * Released under Apache License, Version 2.0:
  * http://www.apache.org/licenses/LICENSE-2.0.html  
  */
@@ -27,6 +27,10 @@ bitfactory.make({ //routes
         },
         "curlthis.min.js": ["header", function(cb) {
             fs.writeFileSync('curlthis.min.js', header + UglifyJS.minify('curlthis.js').code);
+            cb();
+        }],
+        "cli.min.js": ["header", function(cb) {
+            fs.writeFileSync('cli.min.js', header + UglifyJS.minify('cli.js').code);
             cb();
         }]
     }

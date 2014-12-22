@@ -1,2 +1,2 @@
 #!/usr/bin/env node
-require('../curlthis.min.js');
+require('../cli.min.js');
