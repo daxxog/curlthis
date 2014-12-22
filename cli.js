@@ -5,6 +5,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0.html  
  */
 
-var Curlthis = require('./curlthis.min.js');
+var argv = require('optimist').argv._,
+	Curlthis = require('./curlthis.min.js');
 
-new Curlthis();
+new Curlthis(argv);

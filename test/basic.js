@@ -11,9 +11,19 @@ var vows = require('vows'),
 
 vows.describe('basic').addBatch({
     'Curlthis': {
-        topic: Curlthis,
-        'is undefined': function(topic) {
-            assert.equal(topic, undefined);
+        topic: function() {
+        	return Curlthis;
         },
+        'is a function': function(topic) {
+            assert.equal(typeof topic, 'function');
+        }
+    },
+    'Curlthis can install ': {
+        topic: function() {
+        	return Curlthis(['jquery', 'async'], this.callback);
+        },
+        'jquery + async': function(topic) {
+            assert.equal(topic, undefined);
+        }
     }
 }).export(module);

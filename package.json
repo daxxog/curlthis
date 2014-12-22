@@ -3,7 +3,7 @@
     "description" : "grabs predetermined stuff from the internet",
     "homepage"    : "https://github.com/daxxog/curlthis",
     "main"        : "curlthis.min.js",
-    "version"     : "0.0.1",
+    "version"     : "0.1.0",
     "engines": {
         "node" : ">=0.10.33"
     },
@@ -18,9 +18,15 @@
     },
     "devDependencies": {
         "bitfactory": "*",
-        "stoptime": "*",
         "uglify-js": "*",
         "vows": "*"
+    },
+    "dependencies": {
+        "optimist": "*",
+        "async": "*",
+        "request": "*",
+        "stoptime": "*",
+        "pluralize": "*"
     },
     "scripts": {
         "build": "node make.js",
