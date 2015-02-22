@@ -7,5 +7,6 @@
     "flag-back": "https://raw.githubusercontent.com/daxxog/flag-back/master/flag-back.min.js",
     "string": "https://raw.githubusercontent.com/jprichardson/string.js/master/lib/string.min.js",
     "firebug-lite-loader": "https://raw.githubusercontent.com/daxxog/firebug-lite-loader/master/firebug-lite-loader.min.js",
-    "hack-fu": "https://raw.githubusercontent.com/daxxog/hack-fu/master/hack-fu.min.js"
+    "hack-fu": "https://raw.githubusercontent.com/daxxog/hack-fu/master/hack-fu.min.js",
+    "threepane": "https://raw.githubusercontent.com/daxxog/threepane/master/threepane.min.css"
 }
