@@ -9,5 +9,6 @@
     "firebug-lite-loader": "https://raw.githubusercontent.com/daxxog/firebug-lite-loader/master/firebug-lite-loader.min.js",
     "hack-fu": "https://raw.githubusercontent.com/daxxog/hack-fu/master/hack-fu.min.js",
     "threepane": "https://raw.githubusercontent.com/daxxog/threepane/master/threepane.min.css",
-    "index.html": "https://raw.githubusercontent.com/daxxog/index.html/master/index.html"
+    "index.html": "https://raw.githubusercontent.com/daxxog/index.html/master/index.html",
+    "twopane": "https://raw.githubusercontent.com/daxxog/twopane/master/twopane.min.css"
 }
