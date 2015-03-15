@@ -10,5 +10,6 @@
     "hack-fu": "https://raw.githubusercontent.com/daxxog/hack-fu/master/hack-fu.min.js",
     "threepane": "https://raw.githubusercontent.com/daxxog/threepane/master/threepane.min.css",
     "index.html": "https://raw.githubusercontent.com/daxxog/index.html/master/index.html",
-    "twopane": "https://raw.githubusercontent.com/daxxog/twopane/master/twopane.min.css"
+    "twopane": "https://raw.githubusercontent.com/daxxog/twopane/master/twopane.min.css",
+    "fastclick": "https://raw.githubusercontent.com/ftlabs/fastclick/master/lib/fastclick.js"
 }
