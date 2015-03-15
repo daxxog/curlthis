@@ -12,8 +12,6 @@ var vows = require('vows'),
     Curlthis = require('../curlthis.min.js'),
     packages = keys(JSON.parse(fs.readFileSync('packages.json', 'utf8')));
 
-console.log(packages);
-
 vows.describe('basic').addBatch({
     'Curlthis': {
         topic: function() {
