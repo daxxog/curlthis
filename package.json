@@ -19,7 +19,8 @@
     "devDependencies": {
         "bitfactory": "*",
         "uglify-js": "*",
-        "vows": "*"
+        "vows": "*",
+        "underscore": "*"
     },
     "dependencies": {
         "optimist": "*",

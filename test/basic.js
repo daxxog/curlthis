@@ -7,7 +7,12 @@
 
 var vows = require('vows'),
     assert = require('assert'),
-    Curlthis = require('../curlthis.min.js');
+    fs = require('fs'),
+    keys = require('underscore').keys,
+    Curlthis = require('../curlthis.min.js'),
+    packages = keys(JSON.parse(fs.readFileSync('packages.json', 'utf8')));
+
+console.log(packages);
 
 vows.describe('basic').addBatch({
     'Curlthis': {
@@ -20,7 +25,7 @@ vows.describe('basic').addBatch({
     },
     'Curlthis can install ': {
         topic: function() {
-        	return Curlthis(['jquery', 'async'], this.callback);
+        	return Curlthis(packages, this.callback);
         },
         'jquery + async': function(topic) {
             assert.equal(topic, undefined);
