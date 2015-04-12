@@ -25,7 +25,7 @@ vows.describe('basic').addBatch({
         topic: function() {
         	return Curlthis(packages, this.callback);
         },
-        'jquery + async': function(topic) {
+        'all packages': function(topic) {
             assert.equal(topic, undefined);
         }
     }
