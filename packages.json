@@ -11,5 +11,6 @@
     "threepane": "https://raw.githubusercontent.com/daxxog/threepane/master/threepane.min.css",
     "index.html": "https://raw.githubusercontent.com/daxxog/index.html/master/index.html",
     "twopane": "https://raw.githubusercontent.com/daxxog/twopane/master/twopane.min.css",
-    "fastclick": "https://raw.githubusercontent.com/ftlabs/fastclick/master/lib/fastclick.js"
+    "fastclick": "https://raw.githubusercontent.com/ftlabs/fastclick/master/lib/fastclick.js",
+    "reset.css": "https://gist.githubusercontent.com/daxxog/2817593b34a4ec3e0da8/raw/8384bbe9e57272bca772dfdc33aea51c304c77e2/reset.css"
 }
